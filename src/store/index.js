@@ -153,6 +153,7 @@ export default createStore({
       const playerNames = payload.playerNames;
 
       context.state.startTime = new Date().getTime();
+      context.state.players = []
       context.state.playerNames = playerNames;
       context.commit("createPlayers");
       context.state.numPlayers = context.state.playerNames.length;

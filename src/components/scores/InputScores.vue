@@ -142,6 +142,10 @@ export default {
     },
   },
   created() {
+    console.log(this.$store.getters.numPlayers);
+    if(!this.$store.getters.numPlayers) {
+      this.$router.push('/')
+    }
     this.reset();
   },
 };
