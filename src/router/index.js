@@ -29,6 +29,10 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/:other",
+    redirect: "/",
+  }
 ];
 
 const router = createRouter({
